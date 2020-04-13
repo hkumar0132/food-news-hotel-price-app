@@ -1,0 +1,369 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.10240}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 JAVASCRIPT EVENTS\par
+document.addEventListener("DOMContentLoaded", init); //Must be used because this allows //init function to execute only when the document has been loaded\par
+\par
+function init() \{\par
+    "use strict";\par
+\par
+//    let btn = document.getElementById("btn");\par
+//    let lnk = document.getElementById("lnk");\par
+//    let txt = document.getElementById("txt");\par
+//\par
+//    btn.addEventListener("click", (ev) => \{\par
+//        console.log(ev.type, ev.target, ev.currentTarget);\par
+//    \});\par
+//\par
+//    lnk.addEventListener("click", (ev) => \{\par
+//        ev.preventDefault(); //Prevents redirecting to other site\par
+//        console.log(ev.type, ev.target, ev.currentTarget);\par
+//    \});\par
+//\par
+//    txt.addEventListener("input", (ev) => \{\par
+//        console.log(ev.type, ev.target, ev.currentTarget);\par
+//    \});\par
+//\par
+//    txt.addEventListener("blur", (ev) => \{\par
+//        console.log(ev.type, ev.target, ev.currentTarget);\par
+//    \});\par
+//\par
+//    txt.addEventListener("change", (ev) => \{\par
+//        console.log(ev.type, ev.target, ev.currentTarget);\par
+//    \});\par
+    \par
+//    let m = document.getElementById("m");\par
+//    let d = document.getElementById("d");\par
+//    let p = document.getElementById("p");\par
+//    let s = document.getElementById("s");\par
+//    let log = console.log;\par
+//    \par
+//    let highlight = (ev) => \{\par
+//        ev.stopImmediatePropagation();\par
+//        let target = ev.currentTarget;\par
+//        target.style.backgroundColor = "gold";\par
+//        reset(target);\par
+//    \}\par
+//    \par
+//    let reset = (_element) => \{\par
+//        setTimeout(() => \{\par
+//            _element.style.backgroundColor = "white";\par
+//        \}, 2000);\par
+//    \}\par
+//    \par
+//    d.addEventListener('click', (ev) =>\{\par
+//        ev.stopImmediatePropagation();\par
+//       log("Hi, i\\'m a div"); \par
+//    \});\par
+//    \par
+//    [m, p, d, s].forEach((element) => \{\par
+//        element.addEventListener("click", highlight);\par
+//    \});\par
+//    \par
+\}\par
+\par
+CONCISE WAY TO HANDLE EVENTS\par
+        let obj = \{\par
+                init : function() \{\par
+                    document.querySelector("#btn").addEventListener("click", this.y);\par
+                    document.querySelector("#btn").addEventListener("focus", this.y);\par
+                    document.querySelector("#btn").addEventListener("blur", this.y);\par
+                \},\par
+                y : function(ev) \{\par
+                    console.log("The button was " + ev.type + "ed");\par
+                \}\par
+        \}\par
+        obj.init();\par
+\par
+\par
+\par
+\par
+\par
+    <p >\par
+        <input type = "text" id = "txt"/>\par
+    </p>\par
+    <script>\par
+        function init() \{\par
+            let txt = document.getElementById("txt");\par
+            txt.addEventListener("keydown", anyKey);\par
+            document.body.addEventListener("keydown", anyKey);\par
+        \}\par
+        \par
+        function anyKey(ev) \{\par
+            let target = ev.currentTarget;\par
+            let tag = target.tagName;\par
+            let char = ev.char || ev.charCode || ev.which;\par
+            console.log(String.fromCharCode(char), tag);\par
+            \par
+//            if(char == 38)\par
+//                console.log("Up");\par
+//            else if(char == 40)\par
+//                console.log("Down");\par
+//            else if(char == 37)\par
+//                console.log("Left");\par
+//            else if(char == 39)\par
+//                console.log("Right");\par
+        \}\par
+        \par
+        init();\par
+\par
+\par
+\par
+DIFFERENCE BETWEEN MOUSEOVER, MOUSEOUT AND MOUSEENTER, MOUSELEAVE\par
+\par
+<style>\par
+        .container \{\par
+            display : table;\par
+        \}\par
+        .container .enter \{\par
+            background-color: purple;\par
+            border: 2px solid green;\par
+            width: 50%;\par
+        \}\par
+        .container .enter .p \{\par
+            border: 2px solid green;        \par
+        \}\par
+        .container .over \{\par
+            background-color: aqua;\par
+            border: 2px solid green;            \par
+            width : 50%;\par
+        \}\par
+        .container .over .p \{\par
+            border: 2px solid green;     \par
+        \}\par
+    </style>\par
+</head>\par
+\par
+<Body>\par
+    <p>Comparing mouseEnter and mouseLeave with mouseOver and mouseOut</p>\par
+    <div class = "container">\par
+        <div class = "enter">\par
+            <p>Mouse Enter and Mouse Leave!</p>\par
+            <p>The first paragraph</p>\par
+            <p>The second paragraph</p>\par
+        </div>\par
+    \par
+        <div class = "over">\par
+            <p>Mouse Over and Mouse Leave</p>\par
+            <p>The first paragraph</p>\par
+            <p>The second paragraph</p>\par
+        </div>\par
+    </div>\par
+    <script>\par
+        document.querySelector(".enter").addEventListener("mouseenter", entering);\par
+        document.querySelector(".enter").addEventListener("mouseleave", leaving);\par
+        \par
+        function entering(ev)\{\par
+            ev.currentTarget.style.backgroundColor = "gold";\par
+            console.log("Mouse entering");\par
+        \}\par
+        \par
+        function leaving(ev)\{\par
+            ev.currentTarget.style.backgroundColor = "purple";\par
+            console.log("Mouse leaving");\par
+        \}\par
+        \par
+        document.querySelector(".over").addEventListener("mouseover", overing);\par
+        document.querySelector(".over").addEventListener("mouseout", outering);\par
+        \par
+        function overing(ev)\{\par
+            ev.currentTarget.style.backgroundColor = "gold";\par
+            console.log("Mouse overing");\par
+        \}\par
+        \par
+        function outering(ev)\{\par
+            ev.currentTarget.style.backgroundColor = "aqua";\par
+            console.log("Mouse outering");\par
+        \}        \par
+        \par
+    </script>\par
+\par
+\par
+FOCUSIN, FOCUSOUT and RELATED TARGET PROPERTY\par
+\par
+<!Doctype html>\par
+<html lang = "en">\par
+    \par
+<head>\par
+<!--    <script src = "./practice.js"></script>-->\par
+    <title>Events</title>\par
+    <meta charset = "UTF-8">\par
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">\par
+    <style>\par
+        .container \{\par
+            display : table;\par
+        \}\par
+        .container .focusin_focusout \{\par
+            background-color: purple;\par
+            border: 2px solid green;\par
+            width: 50%;\par
+        \}\par
+        .container .focus_in_focusout .p \{\par
+            border: 2px solid green;        \par
+        \}\par
+        .container .focus_blur \{\par
+            background-color: aqua;\par
+            border: 2px solid green;            \par
+            width : 50%;\par
+        \}\par
+        .container .focus_blur .p \{\par
+            border: 2px solid green;     \par
+        \}\par
+    </style>\par
+</head>\par
+\par
+<Body>\par
+    <p>Comparing Focus in, Focus out with Focus and Blur With related target property</p>\par
+    <div class = "container">\par
+        <div class = "focusin_focusout">\par
+            <input value = "FOCUSIN and FOCUSOUT">\par
+            <p>The events focusin and focusout are similar to mouseenter and mouseleave</p>\par
+            <p>They do not bubble</p>\par
+        </div>\par
+    \par
+        <div class = "focus_blur">\par
+            <input value = "FOCUS and BLUR">\par
+            <p>The events focus and blur are similar to mouseover and mouseout</p>\par
+            <p>They do bubble</p>\par
+        </div>\par
+    </div>\par
+    \par
+    <script>\par
+        document.querySelector(".focusin_focusout input").addEventListener("focusin", focusIn);\par
+        document.querySelector(".focusin_focusout input").addEventListener("focusout", focusOut);\par
+        document.querySelector(".focus_blur input").addEventListener("focus", focuS);\par
+        document.querySelector(".focus_blur input").addEventListener("blur", bluR);\par
+        \par
+        function focusIn(ev) \{\par
+            ev.currentTarget.style.color = "gold";\par
+            console.log("Focus In");\par
+            if(ev.relatedTarget) \{\par
+                ev.relatedTarget.style.color = "red";\par
+                console.log("Just left related target " + ev.relatedTarget.id);\par
+            \}\par
+        \}\par
+        \par
+        function focusOut(ev) \{\par
+            ev.currentTarget.style.color = "black";\par
+            console.log("Focus Out");\par
+            if(ev.relatedTarget) \{\par
+                console.log("Headed to related target " + ev.relatedTarget.id);\par
+            \}\par
+        \}\par
+                \par
+        function focuS(ev) \{\par
+            ev.currentTarget.style.color = "gold";\par
+            console.log("Focus");\par
+            if(ev.relatedTarget) \{\par
+                ev.relatedTarget.style.color = "red";\par
+                console.log("Just left related target " + ev.relatedTarget.id);\par
+            \}\par
+        \}\par
+                \par
+        function bluR(ev) \{\par
+            ev.currentTarget.style.color = "black";\par
+            console.log("Blur");\par
+            if(ev.relatedTarget) \{\par
+                console.log("Headed to related target " + ev.relatedTarget.id);\par
+            \}\par
+        \}\par
+    </script>\par
+</Body>\par
+    \par
+    \par
+\par
+USER DEFINED EVENTS :)\par
+    <!Doctype html>\par
+<html lang = "en">\par
+    \par
+<head>\par
+<!--    <script src = "./practice.js"></script>-->\par
+    <title>Events</title>\par
+    <meta charset = "UTF-8">\par
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">\par
+    <style>\par
+      \par
+    </style>\par
+</head>\par
+\par
+<Body>\par
+  \par
+    <main>\par
+    \par
+    </main>\par
+    \par
+    <script>\par
+        let born = new Event("born");\par
+        let died = new CustomEvent("died", \{detail : Date.now()\});\par
+        \par
+        document.addEventListener("DOMContentLoaded", function() \{\par
+            let m = document.querySelector("main");\par
+            addParagraph(m, "This is the first paragraph\\n");\par
+            addParagraph(m, "This is the second paragraph");\par
+            m.addEventListener("click", function() \{\par
+                removeParagraph(m, m.firstElementChild);\par
+            \})\par
+        \});\par
+        \par
+        function addParagraph(parent, txt) \{\par
+            let node = document.createElement("node"); //Creating a node p\par
+            node.addEventListener("born", wasBorn);\par
+            node.addEventListener("died", hasDied);\par
+            node.dispatchEvent(born);\par
+            node.textContent = txt; //Adding txt to the field of p\par
+            parent.appendChild(node); //Appending p to the parent(main)\par
+        \}\par
+        \par
+        function removeParagraph(parent, node) \{\par
+            node.dispatchEvent(died);\par
+            parent.removeChild(node);\par
+        \}\par
+        \par
+        function wasBorn(ev) \{\par
+            console.log(ev.type, ev.target);\par
+        \}\par
+        \par
+        function hasDied(ev) \{\par
+            console.log(ev.type, ev.target, ev.detail);\par
+            ev.target.removeEventListener("born", wasBorn);\par
+            ev.target.removeEventListener("died", hasDied);\par
+        \}\par
+    </script>\par
+</Body>\par
+    \par
+    MOBILE EVENTS\par
+            document.addEventListener("DOMContentLoaded", function() \{\par
+            document.addEventListener("touchstart", start);    \par
+            document.addEventListener("touchend", start);\par
+            document.addEventListener("touchmove", start);\par
+        \});\par
+\par
+HOW TO CREATE EVENTS FOR LIST ITEMS CONCISELY AND IDENTIFY UNIQUELY\par
+<Body>\par
+    <ul class = "unordered">\par
+        <li class = "list-item" id = "1" data-name = "Sam">1. <span>Sam</span></li>\par
+        <li class = "list-item" id = "2" data-name = "Ram">2. <span>Ram</span></li>\par
+        <li class = "list-item" id = "3" data-name = "Jam">3. <span>Jam</span></li>\par
+        <li class = "list-item" id = "4" data-name = "Pam">4. <span>Pam</span></li>\par
+        <li class = "list-item" id = "5" data-name = "Dam">5. <span>Dam</span></li>\par
+    </ul>\par
+    \par
+    <script>\par
+        \par
+        document.addEventListener("DOMContentLoaded", function() \{\par
+//                document.querySelector(".unordered .list-item").addEventListener("click", onclick);   - >   only the first one\par
+//For all ->\par
+            let lis = document.querySelectorAll(".unordered .list-item");\par
+            lis.forEach(li => \{\par
+                li.addEventListener("click", onclick);\par
+            \});\par
+        \});\par
+        \par
+        function onclick(ev) \{\par
+            console.log(ev.currentTarget.tagName, ev.currentTarget.getAttribute("id"),  ev.currentTarget.getAttribute("data-name"));\par
+        \}\par
+        \par
+    </script>\par
+</Body>\par
+    \par
+}
+ 
