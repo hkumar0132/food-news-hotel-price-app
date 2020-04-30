@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { JwtService } from '../jwt.service';
 import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
-import { CatService } from '../cat.service';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { DBService } from '../mango-db-service.service';
 

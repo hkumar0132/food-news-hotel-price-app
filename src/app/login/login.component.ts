@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { DBService } from '../mango-db-service.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',

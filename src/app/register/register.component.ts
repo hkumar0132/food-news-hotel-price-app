@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { DBService } from '../mango-db-service.service';
 import { Router } from '@angular/router';
-import { $ } from 'protractor';
 
 @Component({
   selector: 'app-register',
