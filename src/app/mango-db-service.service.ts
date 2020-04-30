@@ -58,17 +58,6 @@ export class DBService {
     });
   }
 
-  // getTodos() {
-  //   return this.client.auth
-  //     .loginWithCredential(new AnonymousCredential())
-  //     .then(() => {
-  //       return this.db
-  //         .collection<{ email : string, password : string }>('details')
-  //         .find()
-  //         .asArray();
-  //     });
-  // }
-
   login(email, password) {
     
     this.error = false;

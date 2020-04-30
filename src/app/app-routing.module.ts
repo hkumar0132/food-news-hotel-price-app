@@ -8,7 +8,6 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { NewsComponent } from './news/news.component';
 import { FoodComponent } from './food/food.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { HotelsearchComponent } from './hotelsearch/hotelsearch.component';
 
 
 const routes: Routes = [
@@ -16,8 +15,6 @@ const routes: Routes = [
   { path : '', redirectTo : '/home', pathMatch : 'full' },
   { path : 'home', component : HomeComponent },
   { path : 'city/:cityName', component : HotelsComponent },
-  //Not implemented yet
-  { path : 'search/:cityName', component : HotelsearchComponent },
   { path : 'news', component: NewsComponent },
   { path : 'food', component : FoodComponent },
   { path : 'food/:id', component: RestaurantsComponent},

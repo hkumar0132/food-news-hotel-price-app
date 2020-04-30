@@ -16,8 +16,6 @@ import { FoodComponent } from './food/food.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Interceptor } from './interceptor';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { CatService } from './cat.service';
-import { HotelsearchComponent } from './hotelsearch/hotelsearch.component';
 import { OAuthModule } from "angular-oauth2-oidc";
 import { DBService } from './mango-db-service.service';
 
@@ -31,8 +29,7 @@ import { DBService } from './mango-db-service.service';
     HotelsComponent,
     NewsComponent,
     FoodComponent,
-    RestaurantsComponent,
-    HotelsearchComponent
+    RestaurantsComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +53,6 @@ import { DBService } from './mango-db-service.service';
       useClass: Interceptor,
       multi: true
     },
-    [CatService],
     [OAuthModule],
     [DBService]
   ],

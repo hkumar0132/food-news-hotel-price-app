@@ -1,69 +1,45 @@
-<body>
+<body style = "text-align: center;">
   <div class = "container">
-     <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
-           <ul class="navbar-nav collapse navbar-collapse">
-           <li class="nav-item">
-             <input style = "margin-left: 30px" size = "30" [(ngModel)] = "address" name = "address" class = "form-control mr-sm-2" type="text" placeholder="Enter city, landmark, street or locality">  
-           </li>
-             <li class = "nav-item" style = "margin-left: 40px">
-                 <input [(ngModel)] = "checkin" name = "checkin" class="form-control mr-sm-2" type="text" placeholder="Check-in">                  
-             </li>
-             <li class = "nav-item" style = "margin-left: 10px">
-                 <input [(ngModel)] = "checkout" name = "checkout" class="form-control mr-sm-2" type="text" placeholder="Check-out">
-             </li> 
-             <li class = "nav-item" style = "margin-left: 10px; margin-top: 15px;"> 
-                 <select [(ngModel)] = "roomtype" name = "roomtype" class = "form-group btn btn-dark dropdown-toggle" aria-placeholder="single-room">
-                   <option>Single room</option>
-                   <option>Double room</option>
-                 </select>
-             </li>
-           <li class="nav-item">
-             <button (click) = "navigate()" style = "margin-left: 10px" class="btn btn-dark" type="submit"><a>Search</a></button>
-           </li>
-             <li style = " margin-top: 15px; margin-right: 20px;
-             position:absolute; top : 0; right: 30px;" class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                 Explore
-               </a>
-               <div class="dropdown-menu">
-                   <a class="dropdown-item" routerLink = "/news" routerLinkActive = "active" type="submit">
-                       Latest news
-                   </a>
-                   <a class="dropdown-item" routerLink = "/food" routerLinkActive = "active" type="submit">
-                       Hungry?
-                   </a>
-               </div>
-             </li>
-         </ul>
-     </nav>
-   <div style = "left: 0; margin: 100px 100px">
-     <h1 style = "left: 0; margin-bottom: 800px"><b>Get the best price for the hotels you choose!</b></h1>
+    <form style = "text-align: center; display: inline-block; margin-top: 0; height: 200px;" class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
+        <input style = "margin-left: 30px; " [(ngModel)] = "address" name = "address" class = "form-control mr-sm-2" type="text" placeholder="Enter city, street or locality">  
+        <button (click) = "navigate()" style = "margin-top: 10px;" class="btn btn-dark" type="submit"><a>Search</a></button>
+        <div style = " margin-top: 135px; margin-left: inherit;
+        position:absolute; top : 0; " class="nav-item dropdown">
+        <ul style="text-align: center;">
+        <li routerLink = "/news" routerLinkActive = "active" type="submit"class = "btn btn-dark" style = "text-decoration-color: ivory;">
+              Latest news
+        </li>
+        <li routerLink = "/food" routerLinkActive = "active" type="submit" class = "btn btn-dark" style = "text-decoration-color: ivory; margin-left: 20px;">
+              Food
+          </li>
+        </ul>
+      </div>
+    </form>
+   <div style = "left: 0; margin-top: 200px;">
      <h1 class="bg-secondary text-white" style = "margin-left: 0px;margin-bottom: 50px;">Some interesting facts about hotels</h1>
-     <ul>
-       <li class="bg-dark text-white">The “Sky Beam” that shoots out of the Luxor Hotel in Las Vegas
+     <ul style = "left: 0; margin-bottom: 50px;">
+       <li style = "left: 0; margin-bottom: 50px;" class="bg-dark text-white">The “Sky Beam” that shoots out of the Luxor Hotel in Las Vegas
        attracts so many insects that it has established a new ecosystem of moths, bats, and owls
        </li>
-       <img style = "left: 0; margin-bottom: 50px;" src = "assets/img/lightBeam.jpg">
-       <li class="bg-dark text-white">The oldest hotel in the world has been operated by the same Japanese
+     <li style = "left: 0; margin-bottom: 50px;" class="bg-dark text-white">The oldest hotel in the world has been operated by the same Japanese
          family for over 1,300 years. 52 different generations of descendants have
          cared for and operated the inn
-       </li>
-       <img style = "left: 0; margin-bottom: 50px" src = "assets/img/oldestJapan.jpg">
-       <li class="bg-dark text-white">When the historic Plaza Hotel in NYC opened in 1907 a room cost $2.50 per
+     </li>
+       <li style = "left: 0; margin-bottom: 50px;" class="bg-dark text-white">When the historic Plaza Hotel in NYC opened in 1907 a room cost $2.50 per
           night, the equivalent of $64.26 today. The Plaza now charges over $1000/night
        </li>
-       <img style = "left: 0; margin-bottom: 50px" src = "assets/img/plazaHotel.jpg">
-       <li class="bg-dark text-white">Hotels use RFID chips to track their towels and linens. One hotel in Hawaii 
+      
+       <li style = "left: 0; margin-bottom: 50px;" class="bg-dark text-white">Hotels use RFID chips to track their towels and linens. One hotel in Hawaii 
          saved over $15000 in stolen towels using the RFID chips
        </li>
-       <img style = "left: 0; margin-bottom: 50px" src = "assets/img/RFID.jpg">
-       <li class="bg-dark text-white">Half-used hotel soap is sterilized, melted down, and reformed and sent to poorer
+    
+       <li style = "left: 0; margin-bottom: 50px;" class="bg-dark text-white">Half-used hotel soap is sterilized, melted down, and reformed and sent to poorer
           countries with scarce hygiene resources
        </li>
-       <img style = "left: 0; margin-bottom: 50px" src = "assets/img//soapRecycled.jpg">
+     
      </ul>
    </div>
-   <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-bottom">
+   <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-bottom" style="margin-left: 0px;">
      <a class="navbar-brand">Project hotel</a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
          <span class="navbar-toggler-icon"></span>
@@ -76,24 +52,6 @@
              <li class="nav-item">
                  <a style = "margin-left: 10px;" class="nav-link"  routerLink = "/register" routerLinkActive = "active">Sign up</a>
              </li>  
-              <li class = "nav-item"> 
-                 <a href="https://www.facebook.com" class="fa fa-facebook"></a>
-             </li>
-             <li class = "nav-item">
-                 <a href="https://www.twitter.com" class="fa fa-twitter"></a>
-             </li>
-             <li class = "nav-item">
-                 <a href="https://www.google.com" class="fa fa-google"></a>
-             </li>
-             <li class = "nav-item">
-                 <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
-             </li>
-             <li class = "nav-item">
-                 <a href="https://www.youtube.com" class="fa fa-youtube"></a>
-             </li>
-             <li class = "nav-item">
-                 <a href="https://www.instagram.com" class="fa fa-instagram"></a>
-             </li>
          </ul>
      </div>
    </nav>

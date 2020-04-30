@@ -33,10 +33,8 @@ export class HomeComponent implements OnInit {
     this.jwt
     .login(this.username, this.password)
     .subscribe(
-    (data) => {
-      // console.log(data);
-    }
   );
+  
   this.dbService.initDB();
 }
   navigate() {
@@ -44,17 +42,7 @@ export class HomeComponent implements OnInit {
     .subscribe(data => {
         this.city = data['location_suggestions'][0]['city_name'];
         this.router.navigate(['/city', this.city]);
-        // this.router.navigate(['/search', this.city]);
+
       });
   }
-
-
-  // logout() {
-  //   this.jwt.logout();
-  //   console.log("Logged out")
-  // }
-
-  // loginCheck() {
-  //   console.log("Logged in : " + this.jwt.loggedIn())
-  // }
 }

@@ -15,15 +15,6 @@ export class HotelsComponent implements OnInit {
 
   hotelList : object = {};
 
-  // ngOnInit(): void {
-  //   let city = this.route.snapshot.paramMap.get('city');
-
-  //   this.jwt.search(city).
-  //   subscribe((data) => {
-  //     console.log(data);
-  //   });
-  // }
-
   ngOnInit() {
     this.route.paramMap.subscribe((params : ParamMap) => {
       let city = params.get('cityName');
