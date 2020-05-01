@@ -1,19 +1,16 @@
-<body style = "text-align: center;">
+<body>
   <div class = "container">
-    <form style = "text-align: center; display: inline-block; margin-top: 0; height: 200px;" class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
-        <input style = "margin-left: 30px; " [(ngModel)] = "address" name = "address" class = "form-control mr-sm-2" type="text" placeholder="Enter city, street or locality">  
+    <form style = "text-align: center; display: inline-block; margin-top: 0px; height: 200px;" class="bg-success fixed-top">
+        <input style = "margin-top: 20px;" [(ngModel)] = "address" name = "address" class = "form-control mr-sm-2" type="text" placeholder="Enter city/locality to search for hotel">  
         <button (click) = "navigate()" style = "margin-top: 10px;" class="btn btn-dark" type="submit"><a>Search</a></button>
-        <div style = " margin-top: 135px; margin-left: inherit;
-        position:absolute; top : 0; " class="nav-item dropdown">
-        <ul style="text-align: center;">
-        <li routerLink = "/news" routerLinkActive = "active" type="submit"class = "btn btn-dark" style = "text-decoration-color: ivory;">
+        <ul style="text-align: center; margin-top: 50px;">
+        <li routerLink = "/news" routerLinkActive = "active" type="submit"class = "btn btn-dark" style = "text-decoration-color: ivory; ">
               Latest news
         </li>
         <li routerLink = "/food" routerLinkActive = "active" type="submit" class = "btn btn-dark" style = "text-decoration-color: ivory; margin-left: 20px;">
-              Food
-          </li>
+              Order food
+        </li>
         </ul>
-      </div>
     </form>
    <div style = "left: 0; margin-top: 200px;">
      <h1 class="bg-secondary text-white" style = "margin-left: 0px;margin-bottom: 50px;">Some interesting facts about hotels</h1>

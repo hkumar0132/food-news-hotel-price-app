@@ -1,6 +1,6 @@
 body {
-
+  text-align: center;
   background: url("https://wallpaperaccess.com/full/259758.jpg"); 
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover; 
 }
