@@ -9,6 +9,7 @@ export class ApiService {
   public platform: any;
   public geocoder: any;
 
+  //Removed for security issues
   API_KEY_NEWS = '';
   API_KEY_FOOD = '';
 
