@@ -9,8 +9,8 @@ export class ApiService {
   public platform: any;
   public geocoder: any;
 
-  API_KEY_NEWS = '521afa31ea42419ca5f4f2af18ed3939';
-  API_KEY_FOOD = 'fad2d5d381a9023c8283aef3d363f052';
+  API_KEY_NEWS = '';
+  API_KEY_FOOD = '';
 
   constructor(private httpClient : HttpClient) { 
     
