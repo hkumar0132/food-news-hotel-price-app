@@ -1,0 +1,20 @@
+<div>
+  <h1 style="text-align: center; font-size: 40px; margin-bottom: 50px; margin-top: 30px;"><b>Go! Get your food</b></h1>
+  <div style="text-align : center; font-size: 20px; font-style: italic; margin-bottom: 50px;">
+    <b>{{res_shown}} of {{res_found}} results results shown</b>
+  </div>
+  <div style = "text-align: center;background : #707070;" *ngFor = "let rest of rest"><b>
+    <!-- <div [ngStyle]="{'background': 'url(' + image_url + ') no-repeat 0 0'}"></div> -->
+    <p style="font-size: 20px; color: ghostwhite;"><b>{{rest['restaurant']['name']}}</b></p>
+    <p>Rated : {{rest['restaurant']['user_rating']['aggregate_rating']}}(<span style = "color: darkgoldenrod;"><b>{{rest['restaurant']['all_reviews_count']}}</b></span> reviews), {{rest['restaurant']['user_rating']['rating_text']}}</p>
+    <p>Location : {{rest['restaurant']['location']['address']}}</p>
+    <p>Average cost for two : {{rest['restaurant']['currency']}} {{rest['restaurant']['average_cost_for_two']}}</p>
+    <p *ngIf="'{{rest['restaurant']['has_online_delivery']}}'==1">Online delivery</p>
+    <p style = "color: darkred" *ngIf="'{{rest['restaurant']['is_delivering_now']}}'==1"><b>Delivering now</b></p>
+    <!-- <div>
+
+    </div> -->
+    <a class = "btn btn-success" href = "{{rest['restaurant']['url']}}">Order from here</a></b>
+    <hr>
+  </div>
+</div>

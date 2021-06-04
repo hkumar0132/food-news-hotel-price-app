@@ -1,0 +1,384 @@
+body {
+  background: url("https://wallpaperaccess.com/full/259758.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+  
+
+/* @import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, header, main, menu, nav, section, summary {
+  display: block;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: 200 1.5em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0e83a0;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 200;
+  padding-bottom: 10px;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+header .fullheight {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/hotel/splash_hotelphoto.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+
+header .fullheight .hgroup {
+  padding: 100px 0;
+}
+
+header .fullheight .hgroup h1 {
+  color: #FFFFFF;
+  font-size: 5em;
+  font-weight: 800;
+  line-height: .8em;
+  text-shadow: #000000 0 0 20px;
+  text-align: center;
+}
+
+header .fullheight .hgroup h2 {
+  display: block;
+  color: #FFFFFF;
+  width: 60%;
+  max-width: 200px;
+  text-align: center;
+  border: 1px solid #FFFFFF;
+  margin: 15px auto 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+}
+
+header .fullheight .hgroup p {
+  text-align: center;
+}
+
+header .fullheight .hgroup p img {
+  padding-top: 50px;
+  max-width: 50px;
+}
+
+
+header #nav {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBhNWM3MSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA2MzY0MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(top, #0a5c71, #063642);
+  background-image: -webkit-linear-gradient(top, #0a5c71, #063642);
+  background-image: linear-gradient(to bottom, #0a5c71, #063642);
+  width: 100%;
+  z-index: 100;
+}
+
+header #nav:before, header #nav:after {
+  content: '';
+  display: table;
+}
+
+header #nav:after {
+  clear: both;
+}
+
+header #nav .navbar {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header #nav .navbar:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+header #nav .navbar .brand {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  float: left;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  background: #DF4848;
+}
+
+header #nav .navbar .brand a {
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+@media (max-width: 650px) {
+
+  header #nav .navbar .brand a {
+    font-size: 1.2em;
+  }
+
+  header #nav .navbar .brand a span {
+    display: none;
+  }
+}
+
+header #nav .navbar ul {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 66.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+
+header #nav .navbar ul li {
+  float: left;
+}
+
+header #nav .navbar ul li a {
+  color: #FFFFFF;
+  font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  display: inline-block;
+  padding: 10px 10px 10px 45px;
+  text-decoration: none;
+  background-size: 35px;
+  background: no-repeat 2px;
+}
+header #nav .navbar ul li a:hover {
+  background-color: #EFC94C;
+  color: #063642;
+}
+
+@media (min-width: 0) and (max-width: 650px) {
+
+  header #nav .navbar ul li a {
+    padding: 10px 18px;
+  }
+
+  header #nav .navbar ul li a::after {
+    content: '\000a0';
+    display: block;
+  }
+
+  header #nav .navbar ul li a span {
+    display: none;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 960px) {
+
+  header #nav .navbar ul li a {
+    padding-left: 10px;
+  }
+
+  header #nav .navbar ul li a.icon {
+    background-image: none;
+  }
+}
+
+header #nav .navbar ul li a.active {
+  background-color: #DF4848;
+  color: #FFFFFF;
+}
+
+@media (min-width: 650px) {
+
+#hotelinfo {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNhM2Y5MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ1YjI5ZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(top, #3a3f90, #45b29d);
+  background-image: -webkit-linear-gradient(top, #3a3f90, #45b29d);
+  background-image: linear-gradient(to bottom, #3a3f90, #45b29d);
+  color: #FFFFFF;
+}
+
+#hotelinfo h1, #hotelinfo h2, #hotelinfo h3, #hotelinfo h4, #hotelinfo h5, #hotelinfo h6 {
+  color: #FFFFFF;
+}
+
+#hotelinfo .heading h1 {
+  font-size: 3em;
+  font-weight: 200;
+}
+
+#hotelinfo #usefulinfo:before, #hotelinfo #usefulinfo:after {
+  content: '';
+  display: table;
+}
+
+#hotelinfo #usefulinfo:after {
+  clear: both;
+}
+}
+@media (min-width: 650px) {
+
+  #hotelinfo #usefulinfo section {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 3.33333%;
+    padding-right: 3.33333%;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 650px) {
+  #hotelinfo #usefulinfo section.checklist {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+#hotelinfo #usefulinfo section h2 {
+  color: #b5b7e1;
+  font-size: 1.3em;
+  line-height: 110%;
+  padding: 10px 0;
+}
+
+#hotelinfo #usefulinfo section p {
+  font-size: 1em;
+  line-height: 130%;
+}
+
+#hotelinfo #usefulinfo section ul li {
+  list-style: square;
+  margin-left: 10%;
+  line-height: 115%;
+  margin-bottom: 5px;
+}
+
+#hotelinfo #usefulinfo section#arrivalinfo ul {
+  margin: 0;
+}
+
+#hotelinfo #usefulinfo section#arrivalinfo ul li {
+  list-style: none;
+  border-top: 1px solid #FFFFFF;
+  padding: 15px 0;
+  margin-left: 0;
+}
+
+#hotelinfo #usefulinfo section#arrivalinfo ul li strong {
+  color: #EFC94C;
+}
+
+#hotelinfo #usefulinfo section#arrivalinfo ul li:first-child {
+  border-top: none;
+}
+
+#hotelinfo {
+  background-color: rgba(26, 68, 60, 0.5);
+  margin-top: 20px;
+  border: 1px solid #FFFFFF;
+  padding: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+} */
+
+

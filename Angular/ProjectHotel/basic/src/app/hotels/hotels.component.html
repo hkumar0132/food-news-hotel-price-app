@@ -1,0 +1,17 @@
+<body>
+    <table class="table">
+        <thead>
+          <tr>
+            <th style = "font-size :40px;"><h1><b>Hotel name</b></h1></th>
+            <th style = "font-size: 40px;"><h1><b>Best Price</b></h1></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let hotel of hotelList">         
+            <tr height = "100" style = "background-color: #808080;">
+                <td style = "color: ghostwhite"><b>{{hotel.Hotel}}</b></td>
+                <td style = "color: ghostwhite"><b>{{hotel['Best-price']}}</b></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
